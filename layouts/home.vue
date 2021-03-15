@@ -6,11 +6,24 @@
         <aside
           class="h-screen sticky top-0 border-gray-100 hidden p-4 lg:pt-10 lg:block lg:border-r lg:w-96 dark:border-transparent"
         >
-          <img
-            src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=150"
-            alt="Phuong Phung's Avatar"
-            class="rounded-full w-32"
-          />
+          <div class="relative">
+            <div @click.prevent.stop="toggleColorMode()">
+              <icons-sun
+                v-if="$colorMode.value === 'light'"
+                class="w-8 h-8 absolute left-0 cursor-pointer z-10"
+              />
+
+              <icons-moon
+                v-else
+                class="w-8 h-8 absolute left-0 cursor-pointer z-10"
+              />
+            </div>
+            <img
+              src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=150"
+              alt="Phuong Phung's Avatar"
+              class="rounded-full w-32"
+            />
+          </div>
 
           <h2
             class="font-medium text-xl mb-2 mt-4 text-gray-700 dark:text-gray-50"
@@ -41,3 +54,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    toggleColorMode() {
+      if (this.$colorMode.value === 'light') {
+        this.$colorMode.preference = 'dark'
+      } else {
+        this.$colorMode.preference = 'light'
+      }
+    },
+  },
+}
+</script>

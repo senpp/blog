@@ -27,6 +27,19 @@
             Về tôi
           </nuxt-link>
         </div>
+
+        <div
+          class="ml-8"
+          :class="{ 'lg:hidden': !showAvatar }"
+          @click.prevent.stop="toggleColorMode()"
+        >
+          <icons-sun
+            v-if="$colorMode.value === 'light'"
+            class="w-8 h-8 cursor-pointer"
+          />
+
+          <icons-moon v-else class="w-8 h-8 cursor-pointer" />
+        </div>
       </div>
     </div>
   </div>
@@ -38,6 +51,16 @@ export default {
     showAvatar: {
       type: Boolean,
       default: true,
+    },
+  },
+
+  methods: {
+    toggleColorMode() {
+      if (this.$colorMode.value === 'light') {
+        this.$colorMode.preference = 'dark'
+      } else {
+        this.$colorMode.preference = 'light'
+      }
     },
   },
 }

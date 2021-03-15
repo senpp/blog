@@ -36,6 +36,10 @@ export default {
     liveEdit: false,
   },
 
+  colorMode: {
+    classSuffix: '',
+  },
+
   googleFonts: {
     families: {
       Inter: true,
