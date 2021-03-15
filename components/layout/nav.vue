@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full border-b border-gray-100 mb-2 sticky top-0 bg-white z-10 px-2 text-sm md:px-4 sm:text-base"
+    class="w-full border-b border-gray-100 mb-2 sticky top-0 bg-white z-10 px-2 text-sm md:px-4 sm:text-base dark:bg-gray-900 dark:border-gray-800"
   >
     <div class="mx-auto max-w-5xl">
       <div class="flex items-center h-16">
@@ -16,13 +16,13 @@
         <div class="ml-auto">
           <nuxt-link
             to="/"
-            class="font-medium hover:font-semibold hover:text-purple-600 hover:underline mx-2"
+            class="font-medium mx-2 hover:font-semibold hover:text-purple-600 hover:underline dark:text-white"
           >
             Trang chủ
           </nuxt-link>
           <nuxt-link
             to="/portfolio"
-            class="font-medium hover:font-semibold hover:text-purple-600 hover:underline mx-2"
+            class="font-medium mx-2 hover:font-semibold hover:text-purple-600 hover:underline dark:text-white"
           >
             Về tôi
           </nuxt-link>

@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="pt-4 prose prose-sm prose-purple sm:prose md:px-4 lg:prose-lg mx-auto"
-  >
+  <div class="pt-4 md:px-4 mx-auto prose prose-purple dark:prose-light">
     <h1>
       {{ page.title }}
     </h1>

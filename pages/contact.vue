@@ -1,5 +1,5 @@
 <template>
-  <div class="prose prose-sm prose-purple sm:prose lg:prose-lg mx-auto">
+  <div class="prose prose-purple mx-auto dark:prose-light">
     <h1>Liên hệ</h1>
 
     <p>Tôi thường sử dụng các kênh mạng liên lạc sau:</p>

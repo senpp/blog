@@ -1,5 +1,5 @@
 <template>
-  <div class="prose prose-sm prose-purple sm:prose lg:prose-lg mx-auto">
+  <article class="prose prose-purple mx-auto dark:prose-light">
     <h1>Về tôi</h1>
 
     <p>
@@ -33,7 +33,7 @@
       Liên lạc với tôi như thế nào?
       <nuxt-link to="/contact">Liên hệ</nuxt-link>.
     </p>
-  </div>
+  </article>
 </template>
 
 <script>
