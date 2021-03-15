@@ -24,13 +24,7 @@ export default {
     '@nuxtjs/color-mode',
   ],
 
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxt/content',
-    '@nuxtjs/dayjs',
-    '@nuxtjs/sitemap',
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxt/content', '@nuxtjs/dayjs'],
 
   googleAnalytics: {
     id: 'UA-163272788-1',
@@ -47,13 +41,6 @@ export default {
       Inter: true,
     },
     display: 'swap',
-  },
-
-  sitemap: {
-    gzip: true,
-    path: '/sitemap.xml',
-    cacheTime: 1000 * 60 * 60 * 2,
-    trailingSlash: true,
   },
 
   build: {},
