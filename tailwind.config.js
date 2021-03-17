@@ -55,12 +55,15 @@ module.exports = {
                 color: theme('colors.gray.400'),
               },
               code: {
+                textShadow: 'unset',
                 color: theme('colors.white'),
               },
               'a code': {
+                textShadow: 'unset',
                 color: theme('colors.white'),
               },
               pre: {
+                textShadow: 'unset',
                 color: theme('colors.gray.200'),
                 backgroundColor: theme('colors.gray.800'),
               },
@@ -70,6 +73,9 @@ module.exports = {
               },
               'tbody tr': {
                 borderBottomColor: theme('colors.gray.600'),
+              },
+              span: {
+                background: 'unset',
               },
             },
           ],
