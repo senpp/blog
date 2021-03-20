@@ -17,14 +17,7 @@
         </span>
 
         <div class="ml-4">
-          <nuxt-link
-            class="text-sm inline-block bg-purple-100 text-purple-700 px-2 py-1 rounded hover:underline hover:text-purple-900 dark:bg-purple-900 dark:text-white dark:opacity-50"
-            :to="{
-              path: page.dir,
-            }"
-          >
-            {{ page.category }}
-          </nuxt-link>
+          <elements-tag :label="page.category" :to="page.dir" />
         </div>
       </div>
     </div>

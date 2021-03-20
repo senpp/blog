@@ -1,8 +1,10 @@
 <template>
   <div>
     <div class="mb-8">
-      <span class="text-2xl capitalize font-medium text-gray-700 inline-block">
-        {{ pages[0].category }}
+      <span
+        class="text-sm font-medium text-gray-500 uppercase inline-block dark:text-white"
+      >
+        # {{ pages[0].category }}
       </span>
     </div>
 
@@ -11,7 +13,7 @@
         :to="{
           path: page.path,
         }"
-        class="text-xl font-medium text-gray-700 hover:text-purple-700"
+        class="text-xl font-medium text-gray-700 hover:text-purple-700 dark:text-white"
       >
         {{ page.title }}
       </nuxt-link>
@@ -21,9 +23,7 @@
         </span>
 
         <div class="ml-4">
-          <span class="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded">
-            {{ page.category }}
-          </span>
+          <elements-tag :label="page.category" :to="page.dir" />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="dark:bg-gray-900 bg-white min-h-screen">
     <layout-nav :show-avatar="false" />
-    <div class="w-full max-w-5xl mx-auto">
+    <div class="w-full max-w-5xl mx-auto pt-16">
       <div class="lg:flex">
         <aside
           class="h-screen sticky top-0 border-gray-100 hidden p-4 lg:pt-10 lg:block lg:border-r lg:w-96 dark:border-transparent"
