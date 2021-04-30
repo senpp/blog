@@ -2,6 +2,7 @@
 title: 'If-else sao cho sành điệu'
 category: 'coding'
 tags: ['coding']
+publish: true
 ---
 
 Bài viết này nằm trong series về [Code sao cho lười nhất](/coding/code-sao-cho-luoi-nhat).

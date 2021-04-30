@@ -9,7 +9,3 @@
     <layout-footer-banner />
   </div>
 </template>
-
-<script>
-export default {}
-</script>

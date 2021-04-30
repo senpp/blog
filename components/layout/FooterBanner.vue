@@ -14,7 +14,7 @@
           href="https://github.com/senpp"
           rel="noopener noreferrer"
           target="_blank"
-          class="text-purple-600 hover:underline"
+          class="text-purple-600 dark:text-purple-400 dark:text-purple-400 hover:underline"
         >
           @senpp
         </a>

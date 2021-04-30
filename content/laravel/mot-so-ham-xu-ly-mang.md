@@ -2,6 +2,7 @@
 title: 'Xử lý mảng trong Laravel giống như JavaScript'
 category: 'laravel'
 tags: ['laravel', 'php', 'array', 'cheatsheet']
+publish: true
 ---
 
 Nếu anh em nào đã dùng JavaScript quen thuộc thì chắc hẳn không còn xa lạ với những hàm xử lý mảng built-in xịn xò như `Array.prototype.map()`, `Array.prototype.filter()`, `Array.prototype.reduce()`,... Nhưng có thể một số anh em chưa biết thì trong Laravel cũng có một số các hàm như vậy. Tất nhiên là bản thân PHP cũng có nhưng trong bài này mình muốn tập trung vào sử dụng những hàm của Laravel.
@@ -45,3 +46,7 @@ $lessThan3 = collect($arr)
     return $x < 3;
   })->all();
 ```
+
+Trên đây là 03 hàm xử lý mảng mà hay được dùng, anh em có thể tham khảo thêm ở đây nha:
+
+- [Collections - Laravel](https://laravel.com/docs/master/collections#available-methods)

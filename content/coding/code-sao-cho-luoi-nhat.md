@@ -2,6 +2,7 @@
 title: 'Code sao cho lười nhất có thể'
 category: 'coding'
 tags: ['coding']
+publish: true
 ---
 
 Trước giờ phương châm sống của mình là **Thích cái đẹp**, nên mình thường google các đoạn mình đã từng code để tìm ra một giải pháp code làm sao cho gọn gàng, đỡ khiến khi lâu ngày nhìn lại quá nhiều chữ và khiến mình bỏ cuộc khi refactor nó. Trong bài mình có mượn một số các nguyên tắc từ các nguyên tắc coding như [KISS](https://en.wikipedia.org/wiki/KISS_principle), [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [12Factor](https://12factor.net/).

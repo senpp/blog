@@ -15,16 +15,13 @@
 
         <div class="ml-auto">
           <nuxt-link
-            to="/"
-            class="font-medium mx-2 hover:font-semibold hover:text-purple-600 hover:underline dark:text-white"
+            v-for="item in items"
+            :key="item.to.substring(1) ? item.to.substring(1) : 'home'"
+            :to="item.to"
+            exact-active-class="text-purple-700 dark:text-purple-400 underline"
+            class="font-medium mx-2 hover:text-purple-600 dark:hover:text-purple-400 hover:underline dark:text-white"
           >
-            Trang chủ
-          </nuxt-link>
-          <nuxt-link
-            to="/portfolio"
-            class="font-medium mx-2 hover:font-semibold hover:text-purple-600 hover:underline dark:text-white"
-          >
-            Về tôi
+            {{ item.label }}
           </nuxt-link>
         </div>
 
@@ -46,7 +43,9 @@
 </template>
 
 <script>
-export default {
+import { defineComponent, useContext } from '@nuxtjs/composition-api'
+
+export default defineComponent({
   props: {
     showAvatar: {
       type: Boolean,
@@ -54,16 +53,31 @@ export default {
     },
   },
 
-  methods: {
-    toggleColorMode() {
-      if (this.$colorMode.value === 'light') {
-        this.$colorMode.preference = 'dark'
+  setup() {
+    const { $colorMode } = useContext()
+
+    const toggleColorMode = () => {
+      if ($colorMode.value === 'light') {
+        $colorMode.preference = 'dark'
       } else {
-        this.$colorMode.preference = 'light'
+        $colorMode.preference = 'light'
       }
-    },
+    }
+
+    const items = [
+      {
+        label: 'Trang chủ',
+        to: '/',
+      },
+      {
+        label: 'Về tôi',
+        to: '/portfolio',
+      },
+    ]
+
+    return { toggleColorMode, items }
   },
-}
+})
 </script>
 
 <style lang="postcss" scoped>

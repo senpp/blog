@@ -37,14 +37,18 @@
 </template>
 
 <script>
-export default {
+import { defineComponent, useMeta } from '@nuxtjs/composition-api'
+
+export default defineComponent({
   name: 'Porfolio',
   layout: 'home',
 
-  head() {
-    return {
+  setup() {
+    useMeta(() => ({
       title: 'Tôi là phuongphung - ',
-    }
+    }))
   },
-}
+
+  head: {},
+})
 </script>

@@ -17,8 +17,9 @@ export default {
   components: true,
 
   buildModules: [
+    '@nuxtjs/composition-api/module',
+    'nuxt-windicss',
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
     '@nuxtjs/google-fonts',
     '@nuxtjs/color-mode',
@@ -47,5 +48,13 @@ export default {
     display: 'swap',
   },
 
-  build: {},
+  generate: {
+    interval: 2000,
+  },
+
+  build: {
+    babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    },
+  },
 }

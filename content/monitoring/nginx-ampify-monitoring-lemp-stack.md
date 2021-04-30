@@ -2,6 +2,7 @@
 title: 'Monitor LEMP Stacks với NGINX Amplify'
 category: 'monitoring'
 tags: ['monitoring', 'nginx', 'nginx-amplify']
+publish: false
 ---
 
 > [NGINX Amplify](https://amplify.nginx.com/) là một công cụ cloud-based dùng để giám sát và báo cáo sự cố cho NGINX và ứng dụng chạy trên nền PHP.

@@ -2,9 +2,9 @@
   <div class="dark:bg-gray-900 bg-white min-h-screen">
     <layout-nav :show-avatar="false" />
     <div class="w-full max-w-5xl mx-auto pt-16">
-      <div class="lg:flex">
+      <div class="lg:flex relative">
         <aside
-          class="h-screen sticky top-0 border-gray-100 hidden p-4 lg:pt-10 lg:block lg:border-r lg:w-96 dark:border-transparent"
+          class="h-screen -mt-16 sticky top-0 border-gray-100 hidden p-4 lg:pt-32 lg:block lg:border-r lg:w-96 dark:border-transparent"
         >
           <div class="relative">
             <div @click.prevent.stop="toggleColorMode()">
@@ -33,15 +33,15 @@
               href="https://github.com/senpp"
               rel="noopener noreferrer"
               target="_blank"
-              class="text-purple-600 hover:underline"
+              class="text-purple-600 dark:text-purple-400 hover:underline"
             >
               @senpp
             </a>
           </h2>
 
-          <p class="text-gray-600 dark:text-gray-400">
+          <p class="text-gray-400 dark:text-gray-400">
             Blog của tôi không viết 100% về code, nó còn là về cuộc sống của
-            tôi!
+            tôi.
           </p>
         </aside>
 
@@ -56,15 +56,21 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    toggleColorMode() {
-      if (this.$colorMode.value === 'light') {
-        this.$colorMode.preference = 'dark'
+import { defineComponent, useContext } from '@nuxtjs/composition-api'
+
+export default defineComponent({
+  setup() {
+    const { $colorMode } = useContext()
+
+    const toggleColorMode = () => {
+      if ($colorMode.value === 'light') {
+        $colorMode.preference = 'dark'
       } else {
-        this.$colorMode.preference = 'light'
+        $colorMode.preference = 'light'
       }
-    },
+    }
+
+    return { toggleColorMode }
   },
-}
+})
 </script>
