@@ -19,9 +19,11 @@
               />
             </div>
             <img
-              src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=150"
+              src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=128"
               alt="Phuong Phung's Avatar"
-              class="rounded-full w-32"
+              width="128"
+              height="128"
+              class="rounded-full"
             />
           </div>
 

@@ -6,9 +6,11 @@
       <div class="flex items-center h-16">
         <nuxt-link to="/">
           <img
-            src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=150"
+            src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=32"
             alt="Phuong Phung's Avatar"
-            class="block rounded-full w-8"
+            class="block rounded-full"
+            width="32"
+            height="32"
             :class="{ 'lg:hidden': !showAvatar }"
           />
         </nuxt-link>

@@ -2,9 +2,11 @@
   <div class="mx-auto max-w-5xl py-16 text-center">
     <nuxt-link to="/">
       <img
-        src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=150"
+        src="https://s.gravatar.com/avatar/a5f485272d3ff15711f33bcf4f4c839f?s=64"
         alt="Phuong Phung's Avatar"
-        class="block rounded-full w-16 mx-auto"
+        width="64"
+        height="64"
+        class="block rounded-full mx-auto"
       />
     </nuxt-link>
     <div>
