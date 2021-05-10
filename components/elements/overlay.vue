@@ -1,152 +1,61 @@
 <template>
-  <div class="relative">
-    <div
-      v-if="busy"
-      class="loading-page absolute"
-      :class="{
-        'bg-white': bgVariant === 'white',
-      }"
-      :style="{
-        opacity,
-      }"
-    >
-      <div class="sk-folding-cube">
-        <div class="sk-cube1 sk-cube"></div>
-        <div class="sk-cube2 sk-cube"></div>
-        <div class="sk-cube4 sk-cube"></div>
-        <div class="sk-cube3 sk-cube"></div>
+  <transition
+    enter-active-class="ease-out duration-300"
+    enter-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+    enter-to-class="opacity-100 translate-y-0 sm:scale-100"
+    leave-active-class="ease-in duration-200"
+    leave-class="opacity-100 translate-y-0 sm:scale-100"
+    leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+  >
+    <div class="relative">
+      <div
+        v-if="busy"
+        class="
+          flex
+          absolute
+          top-1/2
+          left-1/2
+          transform
+          -translate-y-1/2 -translate-x-1/2
+          items-center
+          bg-indigo-900
+          py-1
+          px-2
+          rounded
+          cursor-wait
+          select-none
+        "
+      >
+        <icon-loading
+          class="animate-spin h-5 w-5 text-indigo-50 mr-2 loading-spin"
+        />
+        <span class="text-xs tracking-tight font-medium text-indigo-50">
+          Đang tải bài viết...
+        </span>
       </div>
-    </div>
 
-    <slot />
-  </div>
+      <slot />
+    </div>
+  </transition>
 </template>
 
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
-
+import IconLoading from '~/assets/svg/icon-loading.svg?inline'
 export default defineComponent({
-  name: 'Overlay',
-
+  components: { IconLoading },
   props: {
     busy: {
       type: Boolean,
       default: false,
     },
-
-    bgVariant: {
-      type: String,
-      default: 'body',
-    },
-
-    opacity: {
-      type: Number,
-      default: 1,
-    },
   },
+  setup() {},
 })
 </script>
 
-<style lang="postcss" scoped>
-.loading-page {
-  z-index: 9999;
-  @apply w-full h-full items-center justify-center flex overscroll-none overflow-hidden;
-}
-
-.sk-folding-cube {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  -webkit-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-}
-
-.sk-folding-cube .sk-cube {
-  float: left;
-  width: 50%;
-  height: 50%;
-  position: relative;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-.sk-folding-cube .sk-cube:before {
-  @apply bg-purple-600;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-  animation: sk-foldCubeAngle 2.4s infinite linear both;
-  -webkit-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-}
-.sk-folding-cube .sk-cube2 {
-  -webkit-transform: scale(1.1) rotateZ(90deg);
-  transform: scale(1.1) rotateZ(90deg);
-}
-.sk-folding-cube .sk-cube3 {
-  -webkit-transform: scale(1.1) rotateZ(180deg);
-  transform: scale(1.1) rotateZ(180deg);
-}
-.sk-folding-cube .sk-cube4 {
-  -webkit-transform: scale(1.1) rotateZ(270deg);
-  transform: scale(1.1) rotateZ(270deg);
-}
-.sk-folding-cube .sk-cube2:before {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-.sk-folding-cube .sk-cube3:before {
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-.sk-folding-cube .sk-cube4:before {
-  -webkit-animation-delay: 0.9s;
-  animation-delay: 0.9s;
-}
-@-webkit-keyframes sk-foldCubeAngle {
-  0%,
-  10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
-    transform: perspective(140px) rotateX(-180deg);
-    opacity: 0;
-  }
-  25%,
-  75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
-    transform: perspective(140px) rotateX(0deg);
-    opacity: 1;
-  }
-  90%,
-  100% {
-    -webkit-transform: perspective(140px) rotateY(180deg);
-    transform: perspective(140px) rotateY(180deg);
-    opacity: 0;
-  }
-}
-
-@keyframes sk-foldCubeAngle {
-  0%,
-  10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
-    transform: perspective(140px) rotateX(-180deg);
-    opacity: 0;
-  }
-  25%,
-  75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
-    transform: perspective(140px) rotateX(0deg);
-    opacity: 1;
-  }
-  90%,
-  100% {
-    -webkit-transform: perspective(140px) rotateY(180deg);
-    transform: perspective(140px) rotateY(180deg);
-    opacity: 0;
-  }
+<style scoped>
+.loading-spin circle {
+  opacity: 0.25;
 }
 </style>

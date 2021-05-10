@@ -19,6 +19,31 @@
     <ul>
       <li>
         <a
+          href="https://phim.phake.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <b>Movie Search Engine</b>
+        </a>
+        , Trang tìm kiếm từ các trang xem phim online và sử dụng VideoJS để
+        play. Ứng dụng sử dụng front-end là <b>NuxtJS</b> và <b>NestJS</b> làm
+        Backend.
+      </li>
+
+      <li>
+        <a
+          href="https://her.phake.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <b>Her</b>
+        </a>
+        , như tên gọi thì trang này mình làm cho nàng. Hội tụ đủ những thứ nàng
+        cần tìm kiếm. Ứng dụng sử dụng front-end là <b>NuxtJS</b>.
+      </li>
+
+      <li>
+        <a
           href="https://vuello.phake.dev"
           target="_blank"
           rel="noopener noreferrer"
@@ -46,6 +71,14 @@ export default defineComponent({
   setup() {
     useMeta(() => ({
       title: 'Tôi là phuongphung - ',
+      meta: [
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          property: 'og:url',
+          content: 'https://phuongphung.com/portfolio',
+        },
+      ],
     }))
   },
 

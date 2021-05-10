@@ -1,6 +1,20 @@
 <template>
   <div
-    class="w-full border-b border-gray-100 mb-2 fixed top-0 bg-white z-10 px-2 text-sm md:px-4 sm:text-base dark:bg-gray-900 dark:border-gray-800"
+    class="
+      w-full
+      border-b border-gray-100
+      mb-2
+      fixed
+      top-0
+      bg-white
+      z-10
+      px-2
+      text-sm
+      md:px-4
+      sm:text-base
+      dark:bg-gray-900
+      dark:border-gray-800
+    "
   >
     <div class="mx-auto max-w-5xl">
       <div class="flex items-center h-16">
@@ -21,7 +35,14 @@
             :key="item.to.substring(1) ? item.to.substring(1) : 'home'"
             :to="item.to"
             exact-active-class="text-purple-700 dark:text-purple-400 underline"
-            class="font-medium mx-2 hover:text-purple-600 dark:hover:text-purple-400 hover:underline dark:text-white"
+            class="
+              font-medium
+              mx-2
+              hover:text-purple-600
+              dark:hover:text-purple-400
+              hover:underline
+              dark:text-white
+            "
           >
             {{ item.label }}
           </nuxt-link>
@@ -32,12 +53,12 @@
           :class="{ 'lg:hidden': !showAvatar }"
           @click.prevent.stop="toggleColorMode()"
         >
-          <icons-sun
+          <icon-sun
             v-if="$colorMode.value === 'light'"
             class="w-8 h-8 cursor-pointer"
           />
 
-          <icons-moon v-else class="w-8 h-8 cursor-pointer" />
+          <icon-moon v-else class="w-8 h-8 cursor-pointer" />
         </div>
       </div>
     </div>
@@ -46,8 +67,12 @@
 
 <script>
 import { defineComponent, useContext } from '@nuxtjs/composition-api'
+import IconSun from '~/assets/svg/icon-sun.svg?inline'
+import IconMoon from '~/assets/svg/icon-moon.svg?inline'
 
 export default defineComponent({
+  components: { IconSun, IconMoon },
+
   props: {
     showAvatar: {
       type: Boolean,

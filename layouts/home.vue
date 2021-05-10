@@ -4,16 +4,29 @@
     <div class="w-full max-w-5xl mx-auto pt-16">
       <div class="lg:flex relative">
         <aside
-          class="h-screen -mt-16 sticky top-0 border-gray-100 hidden p-4 lg:pt-32 lg:block lg:border-r lg:w-96 dark:border-transparent"
+          class="
+            h-screen
+            -mt-16
+            sticky
+            top-0
+            border-gray-100
+            hidden
+            p-4
+            lg:pt-32
+            lg:block
+            lg:border-r
+            lg:w-96
+            dark:border-transparent
+          "
         >
           <div class="relative">
             <div @click.prevent.stop="toggleColorMode()">
-              <icons-sun
+              <icon-sun
                 v-if="$colorMode.value === 'light'"
                 class="w-8 h-8 absolute left-0 cursor-pointer z-10"
               />
 
-              <icons-moon
+              <icon-moon
                 v-else
                 class="w-8 h-8 absolute left-0 cursor-pointer z-10"
               />
@@ -28,7 +41,14 @@
           </div>
 
           <h2
-            class="font-medium text-xl mb-2 mt-4 text-gray-700 dark:text-gray-50"
+            class="
+              font-medium
+              text-xl
+              mb-2
+              mt-4
+              text-gray-700
+              dark:text-gray-50
+            "
           >
             Phuong Phung
             <a
@@ -48,7 +68,17 @@
         </aside>
 
         <main
-          class="w-full flex-auto p-2 lg:px-12 md:p-4 lg:py-6 lg:pt-10 lg:static lg:max-h-full"
+          class="
+            w-full
+            flex-auto
+            p-2
+            lg:px-12
+            md:p-4
+            lg:py-6
+            lg:pt-10
+            lg:static
+            lg:max-h-full
+          "
         >
           <Nuxt />
         </main>
@@ -59,8 +89,11 @@
 
 <script>
 import { defineComponent, useContext } from '@nuxtjs/composition-api'
+import IconSun from '~/assets/svg/icon-sun.svg?inline'
+import IconMoon from '~/assets/svg/icon-moon.svg?inline'
 
 export default defineComponent({
+  components: { IconSun, IconMoon },
   setup() {
     const { $colorMode } = useContext()
 

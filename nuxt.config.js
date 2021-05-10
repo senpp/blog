@@ -22,6 +22,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-analytics',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/svg',
     '@nuxtjs/color-mode',
   ],
 

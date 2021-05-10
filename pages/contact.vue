@@ -32,7 +32,17 @@ export default defineComponent({
   layout: 'home',
 
   setup() {
-    useMeta(() => ({ title: 'Liên hệ - ' }))
+    useMeta(() => ({
+      title: 'Liên hệ - ',
+      meta: [
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          property: 'og:url',
+          content: 'https://phuongphung.com/contact',
+        },
+      ],
+    }))
   },
 
   head: {},

@@ -1,18 +1,32 @@
 <template>
-  <div>
+  <elements-overlay :busy="busy">
     <template v-if="!busy">
       <div v-for="page in pages" :key="page.slug" class="mb-12">
         <nuxt-link
           :to="{
             path: page.path,
           }"
-          class="text-xl font-medium text-gray-700 transition dark:hover:text-purple-400 hover:text-purple-700 dark:text-white"
+          class="
+            text-xl
+            font-medium
+            text-gray-700
+            transition
+            dark:hover:text-purple-400
+            hover:text-purple-700
+            dark:text-white
+          "
         >
           {{ page.title }}
         </nuxt-link>
         <div class="flex items-center">
           <span
-            class="uppercase text-sm font-medium text-gray-400 dark:text-gray-400"
+            class="
+              uppercase
+              text-sm
+              font-medium
+              text-gray-400
+              dark:text-gray-400
+            "
           >
             {{ $dayjs(page.createdAt).format('DD MMM, YYYY') }}
           </span>
@@ -23,9 +37,7 @@
         </div>
       </div>
     </template>
-
-    <elements-overlay v-if="busy" :busy="busy" class="h-30" />
-  </div>
+  </elements-overlay>
 </template>
 
 <script>
@@ -55,7 +67,7 @@ export default defineComponent({
           .fetch()
     )
 
-    busy.value = false
+    setTimeout(() => (busy.value = false), 2000)
 
     useMeta(() => ({ title: '' }))
 

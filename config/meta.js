@@ -15,10 +15,28 @@ export default [
       'Blog của tôi không viết 100% về code, nó còn là về cuộc sống của tôi - phuongphung.com',
   },
   {
+    hid: 'og:locale',
+    name: 'og:locale',
+    property: 'og:locale',
+    content: 'vi_VN',
+  },
+  {
+    hid: 'og:type',
+    name: 'og:type',
+    property: 'og:type',
+    content: 'website',
+  },
+  {
     hid: 'og:image',
     name: 'og:image',
     property: 'og:image',
     content: 'https://phuongphung.com/og.png',
+  },
+  {
+    hid: 'og:url',
+    name: 'og:url',
+    property: 'og:url',
+    content: 'https://phuongphung.com',
   },
   {
     hid: 'og:description',
