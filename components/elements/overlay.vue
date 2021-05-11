@@ -7,7 +7,7 @@
     leave-class="opacity-100 translate-y-0 sm:scale-100"
     leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
   >
-    <div class="relative">
+    <div class="relative min-h-40">
       <div
         v-if="busy"
         class="
@@ -18,7 +18,10 @@
           transform
           -translate-y-1/2 -translate-x-1/2
           items-center
-          bg-indigo-900
+          bg-white
+          shadow
+          dark:shadow-none
+          dark:bg-indigo-900
           py-1
           px-2
           rounded
@@ -27,9 +30,25 @@
         "
       >
         <icon-loading
-          class="animate-spin h-5 w-5 text-indigo-50 mr-2 loading-spin"
+          class="
+            animate-spin
+            h-5
+            w-5
+            text-gray-400
+            dark:text-indigo-50
+            mr-2
+            loading-spin
+          "
         />
-        <span class="text-xs tracking-tight font-medium text-indigo-50">
+        <span
+          class="
+            text-xs
+            tracking-tight
+            font-medium
+            text-gray-500
+            dark:text-indigo-50
+          "
+        >
           Đang tải bài viết...
         </span>
       </div>
