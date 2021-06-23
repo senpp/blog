@@ -2,7 +2,6 @@
   <div
     class="
       w-full
-      border-b border-gray-100
       mb-2
       fixed
       top-0
@@ -13,7 +12,6 @@
       md:px-4
       sm:text-base
       dark:bg-gray-900
-      dark:border-gray-800
     "
   >
     <div class="mx-auto max-w-5xl">
@@ -25,34 +23,27 @@
             class="block rounded-full"
             width="32"
             height="32"
-            :class="{ 'lg:hidden': !showAvatar }"
           />
         </nuxt-link>
 
-        <div class="ml-auto">
+        <div class="ml-auto flex space-x-8">
           <nuxt-link
             v-for="item in items"
             :key="item.to.substring(1) ? item.to.substring(1) : 'home'"
             :to="item.to"
-            exact-active-class="text-purple-700 dark:text-purple-400 underline"
             class="
-              font-medium
-              mx-2
               hover:text-purple-600
               dark:hover:text-purple-400
               hover:underline
               dark:text-white
             "
+            exact-active-class="text-purple-700 dark:text-purple-400 underline"
           >
             {{ item.label }}
           </nuxt-link>
         </div>
 
-        <div
-          class="ml-8"
-          :class="{ 'lg:hidden': !showAvatar }"
-          @click.prevent.stop="toggleColorMode()"
-        >
+        <div class="ml-8" @click.prevent.stop="toggleColorMode()">
           <icon-sun
             v-if="$colorMode.value === 'light'"
             class="w-8 h-8 cursor-pointer"
@@ -93,12 +84,16 @@ export default defineComponent({
 
     const items = [
       {
-        label: 'Trang chủ',
+        label: 'Về tôi',
         to: '/',
       },
       {
-        label: 'Về tôi',
-        to: '/portfolio',
+        label: 'Dự án',
+        to: '/projects',
+      },
+      {
+        label: 'Blog',
+        to: '/blog',
       },
     ]
 

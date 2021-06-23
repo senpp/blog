@@ -20,8 +20,7 @@
           items-center
           bg-white
           shadow
-          dark:shadow-none
-          dark:bg-indigo-900
+          dark:shadow-none dark:bg-indigo-900
           py-1
           px-2
           rounded

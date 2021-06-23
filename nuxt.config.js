@@ -5,6 +5,7 @@ export default {
   target: 'static',
 
   head: {
+    title: 'phuongphung.com',
     titleTemplate: '%sphuongphung.com',
     meta: MetaConfig,
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
