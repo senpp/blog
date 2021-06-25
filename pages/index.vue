@@ -1,6 +1,6 @@
 <template>
   <article class="prose prose-purple mx-auto dark:prose-light">
-    <h1>Phương Phùng</h1>
+    <h1>Phuong Phung</h1>
 
     <p>Hi, tôi là Phương Phùng,</p>
 
@@ -94,3 +94,9 @@ export default defineComponent({
   head: {},
 })
 </script>
+
+<style lang="postcss" scoped>
+a {
+  @apply border-b border-gray-200 transition hover:border-gray-600 hover:transition;
+}
+</style>
