@@ -23,7 +23,7 @@
     </p>
 
     <p>
-      Ngoài code ra thì sở thích của tôi là cà phê và chụp hình, tôi thích sự
+      Ngoài code ra thì sở thích của tôi là cà phê và chụp ảnh, tôi thích sự
       chính xác đến từng <i><b>mg</b></i> khi pha chế ra một ly cà phê.
     </p>
 

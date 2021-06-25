@@ -17,6 +17,7 @@ export default defineConfig({
       colors: {
         'light-blue': colors.lightBlue,
         cyan: colors.cyan,
+        gray: colors.trueGray,
       },
       typography: {
         DEFAULT: {
@@ -26,6 +27,9 @@ export default defineConfig({
             },
             code: {
               textShadow: 'unset',
+            },
+            a: {
+              textDecoration: 'none',
             },
             'a code': {
               textShadow: 'unset',
@@ -38,7 +42,7 @@ export default defineConfig({
 
         light: {
           css: {
-            color: colors.coolGray[200],
+            color: colors.trueGray[200],
             '[class~="lead"]': {
               color: colors.white,
             },
@@ -61,24 +65,24 @@ export default defineConfig({
               color: colors.purple[400],
             },
             'ol > li::before': {
-              color: colors.coolGray[200],
+              color: colors.trueGray[200],
             },
             'ul > li::before': {
-              backgroundColor: colors.coolGray[600],
+              backgroundColor: colors.trueGray[600],
             },
             hr: {
-              borderColor: colors.coolGray[200],
+              borderColor: colors.trueGray[200],
             },
             blockquote: {
-              color: colors.coolGray[200],
-              borderLeftColor: colors.coolGray[600],
+              color: colors.trueGray[200],
+              borderLeftColor: colors.trueGray[600],
             },
             'figure figcaption': {
-              color: colors.coolGray[400],
+              color: colors.trueGray[400],
             },
             pre: {
-              color: colors.coolGray[200],
-              backgroundColor: colors.coolGray[800],
+              color: colors.trueGray[200],
+              backgroundColor: colors.trueGray[800],
             },
             code: {
               color: colors.white,
@@ -88,10 +92,10 @@ export default defineConfig({
             },
             thead: {
               color: colors.white,
-              borderBottomColor: colors.coolGray[400],
+              borderBottomColor: colors.trueGray[400],
             },
             'tbody tr': {
-              borderBottomColor: colors.coolGray[600],
+              borderBottomColor: colors.trueGray[600],
             },
           },
         },

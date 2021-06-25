@@ -16,7 +16,7 @@
           rel="noopener noreferrer"
           class="block -mb-4"
         >
-          <b>Movie Search Engine</b>
+          <b>Phim</b>
         </a>
         <p>
           Trang tìm kiếm từ các trang xem phim online và sử dụng VideoJS để
@@ -77,7 +77,7 @@
       >:
     </p>
 
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 gap-4 xl:gap-8">
       <div class="flex space-x-4">
         <div>
           <icon-template
@@ -93,7 +93,26 @@
           >
             <b>Vue3 Template</b>
           </a>
-          <p>Vite SSG + Vue3 + TypeScript + WindiCSS Starter Template</p>
+          <p class="text-gray-400">Vue3 Starter Template</p>
+        </div>
+      </div>
+
+      <div class="flex space-x-4">
+        <div>
+          <icon-movie
+            class="w-16 h-16 fill-current text-gray-600 dark:text-gray-400"
+          />
+        </div>
+        <div>
+          <a
+            href="https://github.com/phakedev/vue-template"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block -mb-4"
+          >
+            <b>Phim</b>
+          </a>
+          <p class="text-gray-400">Movie Search Engine</p>
         </div>
       </div>
     </div>
