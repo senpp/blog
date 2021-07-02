@@ -6966,10 +6966,10 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-windicss@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-1.1.1.tgz#3d63d1357b75c85b1fd9c7ff2ba13c21d36eeb81"
-  integrity sha512-+B79g1t2gKP91qL2sZL2QXZj9xM1oT+VdAW5RK+yrkPOST/qJbEHI7QQHL46iMp8LJddRQxvciuMNHzcvE0crg==
+nuxt-windicss@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-1.1.2.tgz#04c522aa733befd6fb3772ca0e0e37e503338f9e"
+  integrity sha512-kdx6Rsstil1AsEgXMvIPBOggxQajUJkhIVD41R6xJ+yrd5XW4J5cTZntYypn3gALj33CZGhmAlIhXLYP3vIKfg==
   dependencies:
     clear-module "^4.1.1"
     defu "^4.0.1"
