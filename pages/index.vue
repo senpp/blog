@@ -97,6 +97,6 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 a {
-  @apply border-b border-gray-200 transition hover:border-gray-600 hover:transition;
+  @apply border-b border-gray-200 transition hover:border-gray-600 hover:transition dark:border-dark-600 dark:hover:border-dark-100;
 }
 </style>

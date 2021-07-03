@@ -1,7 +1,17 @@
 <template>
   <article class="prose prose-purple mx-auto dark:prose-light">
     <h1>Dự án</h1>
-    <div class="font-medium text-gray-600 mt-6 xl:mt-12 mb-4 xl:mb-4">
+    <div
+      class="
+        font-medium
+        text-gray-800
+        mt-6
+        xl:mt-12
+        mb-4
+        xl:mb-4
+        dark:text-white
+      "
+    >
       Dự án cá nhân:
     </div>
 
@@ -11,7 +21,15 @@
       :href="personalProject.link"
       target="_blank"
       rel="noopener noreferrer"
-      class="flex space-x-6 hover:bg-gray-100 rounded p-4"
+      class="
+        flex
+        space-x-6
+        transtion
+        hover:transition hover:bg-gray-100
+        rounded
+        p-4
+        dark:hover:bg-dark-700
+      "
     >
       <div>
         <icon
@@ -20,18 +38,28 @@
         />
       </div>
       <div>
-        <h5 class="block text-gray-700">
+        <h5 class="block text-gray-800 font-semibold dark:text-white">
           {{ personalProject.name }}
         </h5>
 
-        <h6 class="text-gray-400 font-normal">
+        <h6 class="text-gray-500 font-normal dark:text-gray-400">
           <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="personalProject.description" />
         </h6>
       </div>
     </a>
 
-    <div class="font-medium text-gray-600 mt-6 xl:mt-12 mb-4 xl:mb-4">
+    <div
+      class="
+        font-medium
+        text-gray-800
+        mt-6
+        xl:mt-12
+        mb-4
+        xl:mb-4
+        dark:text-white
+      "
+    >
       Dự án
       <a href="https://phake.dev" target="_blank" rel="noopener noreferrer">
         <b>Phake.dev</b>
@@ -45,7 +73,14 @@
         :href="phakeDevProject.link"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex space-x-4 hover:bg-gray-100 rounded p-4"
+        class="
+          flex
+          space-x-4
+          hover:bg-gray-100
+          rounded
+          p-4
+          dark:hover:bg-dark-700
+        "
       >
         <div>
           <icon
@@ -54,8 +89,10 @@
           />
         </div>
         <div>
-          <h5 class="block text-gray-700">{{ phakeDevProject.name }}</h5>
-          <h6 class="text-gray-400 font-normal">
+          <h5 class="block text-gray-800 font-semibold dark:text-white">
+            {{ phakeDevProject.name }}
+          </h5>
+          <h6 class="text-gray-500 font-normal dark:text-gray-400">
             {{ phakeDevProject.description }}
           </h6>
         </div>
