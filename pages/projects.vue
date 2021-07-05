@@ -66,7 +66,7 @@
       </a>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 xl:gap-8">
+    <div class="grid grid-cols-2 gap-4 xl:gap-4">
       <a
         v-for="(phakeDevProject, index) in phakeDevProjects"
         :key="`pdp-${index}`"
@@ -92,7 +92,7 @@
           <h5 class="block text-gray-800 font-semibold dark:text-white">
             {{ phakeDevProject.name }}
           </h5>
-          <h6 class="text-gray-500 font-normal dark:text-gray-400">
+          <h6 class="text-gray-500 font-normal dark:text-gray-400 text-sm">
             {{ phakeDevProject.description }}
           </h6>
         </div>
@@ -143,6 +143,12 @@ export default defineComponent({
         name: 'Vue3 Template',
         link: 'https://github.com/phakedev/vue-template',
         description: 'Vue3 Starter Template',
+      },
+      {
+        icon: 'template',
+        name: 'Flask Template',
+        link: 'https://github.com/phakedev/flask-template',
+        description: 'Python3 Flask Starter Template',
       },
       {
         icon: 'movie',
