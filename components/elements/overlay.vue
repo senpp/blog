@@ -15,10 +15,10 @@
           absolute
           items-center
           bg-white
+          dark:bg-gray-900
           h-full
           w-full
           py-1
-          px-2
           rounded
           cursor-wait
           select-none

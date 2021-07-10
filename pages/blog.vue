@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h2 class="text-3xl font-bold mb-8 border-b inline-block">Blog</h2>
+    <h2 class="text-3xl font-bold mb-8 border-b inline-block dark:text-white">
+      Blog
+    </h2>
     <elements-overlay :busy="busy">
       <template v-if="!busy">
         <div v-for="page in pages" :key="page.slug" class="mb-12">
