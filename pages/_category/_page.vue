@@ -1,9 +1,9 @@
 <template>
   <elements-overlay>
-    <div class="pt-4 md:px-4 mx-auto prose prose-purple dark:prose-light">
-      <h1>
+    <div class="pt-4 md:px-4 mx-auto prose-lg prose-purple dark:prose-light">
+      <h2 class="!font-black">
         {{ page.title }}
-      </h1>
+      </h2>
       <p class="text-gray-400 text-base">
         {{ $dayjs(page.updatedAt).format('DD MMM, YYYY') }}
       </p>
@@ -15,7 +15,7 @@
 <script>
 export default {
   name: 'SinglePage',
-  layout: 'page',
+  layout: 'home',
 
   async asyncData({ $content, route }) {
     const page = await $content(route.params.category)

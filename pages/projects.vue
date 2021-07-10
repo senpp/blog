@@ -1,6 +1,6 @@
 <template>
-  <article class="prose prose-purple mx-auto dark:prose-light">
-    <h1>Dự án</h1>
+  <article class="prose-lg prose-purple mx-auto dark:prose-light">
+    <h2 class="!font-bold border-b inline-block">Dự án</h2>
     <div
       class="
         font-medium
@@ -42,7 +42,7 @@
           {{ personalProject.name }}
         </h5>
 
-        <h6 class="text-gray-500 font-normal dark:text-gray-400">
+        <h6 class="text-gray-500 font-light dark:text-gray-400">
           <!-- eslint-disable-next-line vue/no-v-html -->
           <span v-html="personalProject.description" />
         </h6>
@@ -60,13 +60,13 @@
         dark:text-white
       "
     >
-      Dự án
       <a href="https://phake.dev" target="_blank" rel="noopener noreferrer">
         <b>Phake.dev</b>
       </a>
+      Templates
     </div>
 
-    <div class="grid grid-cols-2 gap-4 xl:gap-4">
+    <div class="grid grid-cols-2 gap-4 xl:gap-4 !mb-16">
       <a
         v-for="(phakeDevProject, index) in phakeDevProjects"
         :key="`pdp-${index}`"
@@ -92,7 +92,7 @@
           <h5 class="block text-gray-800 font-semibold dark:text-white">
             {{ phakeDevProject.name }}
           </h5>
-          <h6 class="text-gray-500 font-normal dark:text-gray-400 text-sm">
+          <h6 class="text-gray-500 font-light dark:text-gray-400">
             {{ phakeDevProject.description }}
           </h6>
         </div>
@@ -130,7 +130,7 @@ export default defineComponent({
           luôn API của các rạp chiếu phim tại Việt Nam.`,
       },
       {
-        icon: 'vuello',
+        icon: 'trello',
         name: 'Vuello',
         link: 'https://vuello.phake.dev',
         description: `Trello clone được dựng bằng <b>Vue2</b> và <b>Lumen 8</b>`,
@@ -139,22 +139,22 @@ export default defineComponent({
 
     const phakeDevProjects = [
       {
-        icon: 'template',
+        icon: 'vue',
         name: 'Vue3 Template',
         link: 'https://github.com/phakedev/vue-template',
-        description: 'Vue3 Starter Template',
+        description: 'Vue3 TypeScript Starter Template',
       },
       {
-        icon: 'template',
+        icon: 'flask',
         name: 'Flask Template',
         link: 'https://github.com/phakedev/flask-template',
         description: 'Python3 Flask Starter Template',
       },
       {
-        icon: 'movie',
-        name: 'Phim',
-        link: 'https://phim.phake.dev',
-        description: 'Movie Search Engine',
+        icon: 'nestjs',
+        name: 'NestJS Template',
+        link: 'https://github.com/phakedev/nestjs-template',
+        description: 'NestJS TypeScript Starter Template',
       },
     ]
 

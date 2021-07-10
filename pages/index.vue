@@ -1,8 +1,8 @@
 <template>
-  <article class="prose prose-purple mx-auto dark:prose-light">
-    <h1>Phuong Phung</h1>
+  <article class="prose-lg prose-purple mx-auto dark:prose-light">
+    <h1 class="!font-black">Hi.</h1>
 
-    <p>Hi, tôi là Phương Phùng,</p>
+    <h3 class="!font-bold">Tôi là Phương Phùng,</h3>
 
     <p>
       Từng đem mộng trở thành một game thủ khi còn nhỏ, rồi do không có tiền đem

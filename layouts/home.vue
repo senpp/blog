@@ -7,9 +7,8 @@
           class="
             w-full
             flex-auto
-            p-2
-            lg:px-12
-            md:p-4
+            p-4
+            xl:px-0
             lg:py-6 lg:pt-10 lg:static lg:max-h-full
           "
         >

@@ -57,4 +57,14 @@ export default [
     content:
       'Blog của tôi không viết 100% về code, nó còn là về cuộc sống của tôi - phuongphung.com',
   },
+  {
+    hid: 'msapplication-TileColor',
+    name: 'msapplication-TileColor',
+    content: '#da532c',
+  },
+  {
+    hid: 'theme-color',
+    name: 'theme-color',
+    content: '#ffffff',
+  },
 ]

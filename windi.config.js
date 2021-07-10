@@ -11,7 +11,7 @@ export default defineConfig({
 
   theme: {
     fontFamily: {
-      sans: ['Inter'],
+      sans: ['Asap'],
     },
     extend: {
       colors: {
@@ -23,19 +23,16 @@ export default defineConfig({
         DEFAULT: {
           css: {
             pre: {
-              textShadow: 'unset',
+              textShadow: 'none',
             },
             code: {
-              textShadow: 'unset',
+              textShadow: 'none',
             },
             a: {
               textDecoration: 'none',
             },
             'a code': {
-              textShadow: 'unset',
-            },
-            '.token': {
-              background: 'unset',
+              textShadow: 'none',
             },
           },
         },
@@ -86,9 +83,13 @@ export default defineConfig({
             },
             code: {
               color: colors.white,
+              textShadow: 'none',
             },
             'a code': {
               color: colors.white,
+            },
+            '.token': {
+              background: 'none',
             },
             thead: {
               color: colors.white,

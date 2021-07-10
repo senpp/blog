@@ -1,43 +1,46 @@
 <template>
-  <elements-overlay :busy="busy">
-    <template v-if="!busy">
-      <div v-for="page in pages" :key="page.slug" class="mb-12">
-        <nuxt-link
-          :to="{
-            path: page.path,
-          }"
-          class="
-            text-xl
-            font-medium
-            text-gray-700
-            transition
-            dark:hover:text-purple-400
-            hover:text-purple-700
-            dark:text-white
-          "
-        >
-          {{ page.title }}
-        </nuxt-link>
-        <div class="flex items-center">
-          <span
+  <div>
+    <h2 class="text-3xl font-bold mb-8 border-b inline-block">Blog</h2>
+    <elements-overlay :busy="busy">
+      <template v-if="!busy">
+        <div v-for="page in pages" :key="page.slug" class="mb-12">
+          <nuxt-link
+            :to="{
+              path: page.path,
+            }"
             class="
-              uppercase
-              text-sm
+              text-xl
               font-medium
-              text-gray-400
-              dark:text-gray-400
+              text-gray-700
+              transition
+              dark:hover:text-purple-400
+              hover:text-purple-700
+              dark:text-white
             "
           >
-            {{ $dayjs(page.createdAt).format('DD MMM, YYYY') }}
-          </span>
+            {{ page.title }}
+          </nuxt-link>
+          <div class="flex items-center">
+            <span
+              class="
+                uppercase
+                text-sm
+                font-medium
+                text-gray-400
+                dark:text-gray-400
+              "
+            >
+              {{ $dayjs(page.createdAt).format('DD MMM, YYYY') }}
+            </span>
 
-          <div class="ml-4">
-            <elements-tag :label="page.category" :to="page.dir" />
+            <div class="ml-4">
+              <elements-tag :label="page.category" :to="page.dir" />
+            </div>
           </div>
         </div>
-      </div>
-    </template>
-  </elements-overlay>
+      </template>
+    </elements-overlay>
+  </div>
 </template>
 
 <script>
@@ -69,7 +72,7 @@ export default defineComponent({
 
     setTimeout(() => (busy.value = false), 2000)
 
-    useMeta(() => ({ title: '' }))
+    useMeta(() => ({ title: 'Blog - ' }))
 
     return {
       pages,
